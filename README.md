@@ -4,7 +4,14 @@
 
 ## The Problem
 
-Claude Code is stateless. Every time you start a new conversation, Claude has **zero memory** of what you did before. If you're working on a multi-day project, you have to re-explain everything from scratch.
+Claude Code loses all conversation context when you end a session. It can still read your files and CLAUDE.md, but has **no memory of what you discussed, decided, or planned**. If you're working on a multi-day project, you have to re-explain everything from scratch.
+
+| What persists between sessions | What's lost |
+|-------------------------------|-------------|
+| ✅ Files on disk | ❌ Conversation history |
+| ✅ CLAUDE.md project instructions | ❌ Decisions and reasoning |
+| ✅ Code and outputs | ❌ Current plan and progress |
+| | ❌ Context and objectives |
 
 ## The Solution
 
