@@ -1,6 +1,6 @@
-Create a SESSION.md for an existing session folder. This file serves as the **persistent memory** of the session — it must contain everything needed for Claude to resume work later without any prior context.
+Create SESSION.md and MONITOR.md for a session folder. These files serve as **persistent memory** (SESSION.md) and **interaction audit trail** (MONITOR.md).
 
-1. Ask which session to document (or detect from current working directory)
+1. Ask which session to initialize (or detect from current working directory)
 2. Scan the session folder:
    - What files already exist (inputs, drafts, outputs)
    - What subfolders exist
@@ -54,10 +54,30 @@ Create a SESSION.md for an existing session folder. This file serves as the **pe
 ## Resume Instructions
 [Specific instructions for Claude when resuming this session]
 1. Read this SESSION.md fully
-2. Check file index against actual files
-3. Continue from the next unchecked step in Plan
-4. [any session-specific instructions]
+2. Read MONITOR.md for interaction history
+3. Check file index against actual files
+4. Continue from the next unchecked step in Plan
+5. [any session-specific instructions]
 ```
 
-Important: Add skills to **Skills used** only as they are actually used during work, not upfront.
-Save as SESSION.md in the session folder root.
+5. Initialize MONITOR.md:
+
+```markdown
+# Monitor: <name>
+
+## Overview
+- **Session:** <name>
+- **Started:** YYYY-MM-DD HH:MM
+- **Total interactions:** 0
+- **Total saves:** 0
+
+## Interaction Log
+[Populated on each /save-session with summarized prompt/response pairs]
+```
+
+6. **Activate monitoring:** Write the session path to `.active-session` in the project root. This tells the monitoring hooks where to log prompts.
+
+Important:
+- Add skills to **Skills used** only as they are actually used during work, not upfront.
+- Save both files in the session folder root.
+- After init, every prompt you type is automatically timestamped in `monitor.log` by the hooks.

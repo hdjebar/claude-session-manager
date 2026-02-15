@@ -2,28 +2,20 @@
 .DS_Store
 Thumbs.db
 
+# Monitoring temp files
+.active-session
+**/monitor.log
+
 # Python
 __pycache__/
 *.pyc
-*.pyo
-.venv/
-venv/
 
 # Node
 node_modules/
-package-lock.json
 
-# IDE
+# Editors
+*.swp
+*.swo
+*~
 .vscode/
 .idea/
-
-# Temp files
-*.tmp
-*.bak
-*~
-
-# Large generated files (optional - uncomment if you don't want to track outputs)
-# outputs/*.pdf
-# outputs/*.docx
-# outputs/*.pptx
-# outputs/*.xlsx
