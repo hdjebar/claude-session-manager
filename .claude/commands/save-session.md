@@ -20,6 +20,11 @@ Use this before ending a Claude Code conversation to preserve both context and i
 ## Update MONITOR.md (Monitoring Snapshot)
 Read `monitor.log` in the session folder — this contains timestamped raw prompts and response markers logged by hooks.
 
+**Token budget:** MONITOR.md is read in full on every `/resume-session`. Keep each save snapshot compact:
+- Interaction summaries: max 10 words per column. Collapse repetitive interactions (e.g., "3× iterated on test fixes").
+- If there are more than 20 interactions in a period, summarize in groups rather than listing each one.
+- Omit the Decisions Made sub-section if none were made.
+
 Add a new snapshot section to MONITOR.md:
 
 ```markdown
