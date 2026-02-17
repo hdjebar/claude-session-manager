@@ -81,3 +81,4 @@ Important:
 - Add skills to **Skills used** only as they are actually used during work, not upfront.
 - Save both files in the session folder root.
 - After init, every prompt you type is automatically timestamped in `monitor.log` by the hooks.
+- **Token awareness:** SESSION.md is read in full on resume. Keep sections concise — use bullet points, not paragraphs. The Progress Log should capture *what* and *what's next*, not narrative.

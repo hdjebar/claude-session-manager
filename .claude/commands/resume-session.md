@@ -5,7 +5,7 @@ Resume a previous session by loading its full context from SESSION.md and monito
 
 ## Restore Context
 2. Read **SESSION.md** completely — this is the session memory
-3. Read **MONITOR.md** completely — this is the interaction history
+3. Read **MONITOR.md** — focus on the Overview totals and the **latest save snapshot only**. Skim earlier snapshots for key decisions but do not load them verbatim (they are historical and re-reading them all wastes tokens).
 4. Verify the file index: check that listed files still exist, flag any missing or new files
 5. Check for orphaned `monitor.log` entries (prompts logged after last save but before session ended — summarize them)
 
